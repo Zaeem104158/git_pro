@@ -27,7 +27,7 @@ class _ProfileRemoteDataSource implements ProfileRemoteDataSource {
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/user/${username}',
+            '/users/${username}',
             queryParameters: queryParameters,
             data: _data,
           )

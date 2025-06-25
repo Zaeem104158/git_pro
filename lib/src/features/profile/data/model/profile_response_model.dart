@@ -15,16 +15,14 @@ class ProfileResponseModel extends ProfileResponseEntity {
   factory ProfileResponseModel.fromJson(Map<String, dynamic> json) {
     return ProfileResponseModel(
       login: json['login'],
-
+      avatarUrl: json['avatar_url'],
       name: json['name'],
-
       publicRepos: json['public_repos'],
-
       followers: json['followers'],
       following: json['following'],
       createdAt: json['created_at'] == null
           ? null
-          : DateTime.parse(json['createdAt']),
+          : DateTime.parse(json['created_at']),
       updatedAt: json['updated_at'] == null
           ? null
           : DateTime.parse(json['updated_at']),
