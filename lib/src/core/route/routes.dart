@@ -7,9 +7,9 @@ final class Route {
 }
 
 final class Routes {
-  static const Route home = Route('home', '/');
+  static const Route home = Route('home', '/home');
   static const Route notifications = Route('search', '/search');
-  static const Route profile = Route('profile', '/profile');
+  static const Route profile = Route('profile', '/');
   static const Route login = Route('login', '/login');
 }
 

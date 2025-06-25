@@ -4,6 +4,7 @@ import 'package:injectable/injectable.dart';
 import 'package:point_of_sale/src/core/di/injection.dart';
 import 'package:point_of_sale/src/core/service/cache_service.dart';
 import 'package:point_of_sale/src/features/auth/presentation/pages/login_page.dart';
+import 'package:point_of_sale/src/features/profile/presentation/pages/profile_page.dart';
 import 'package:point_of_sale/src/shared/widgets/screen_wrapper.dart';
 part 'routes.dart';
 
@@ -16,8 +17,8 @@ class AppPage {
   late GoRouter router;
 
   AppPage() {
-    cacheService = getIt<ICacheService>();
-    final token = cacheService.read('bearer_token');
+    //cacheService = getIt<ICacheService>();
+    //final token = cacheService.read('bearer_token');
 
     routes = [
       GoRoute(
@@ -45,9 +46,8 @@ class AppPage {
           GoRoute(
             path: Routes.profile.path,
             name: Routes.profile.name,
-            pageBuilder: (context, state) => const MaterialPage(
-              child: Scaffold(body: Center(child: Text("Profile"))),
-            ),
+            pageBuilder: (context, state) =>
+                const MaterialPage(child: ProfilePage()),
           ),
         ],
       ),
@@ -56,7 +56,7 @@ class AppPage {
     router = GoRouter(
       navigatorKey: navigatorKey,
       routes: routes,
-      initialLocation: token == null ? Routes.login.path : Routes.home.path,
+      //initialLocation: token != null ? Routes.login.path : Routes.home.path,
     );
   }
 }

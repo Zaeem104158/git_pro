@@ -8,6 +8,7 @@ import 'package:point_of_sale/src/features/auth/data/datasources/remote/auth_rem
 import 'package:point_of_sale/src/features/auth/data/repository/auth_repository_impl.dart';
 import 'package:point_of_sale/src/features/auth/domain/usercases/login_usercase.dart';
 import 'package:point_of_sale/src/features/auth/presentation/bloc/login_bloc.dart';
+import 'package:point_of_sale/src/features/profile/presentation/bloc/profile_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,12 +17,8 @@ void main() async {
   runApp(
     MultiBlocProvider(
       providers: [
-        // BlocProvider<LoginBloc>(
-        //   create: (context) => LoginBloc(
-        //     Login(AuthRepositoryImpl(AuthRemoteDataSource(getIt<Dio>()))),
-        //   ), // assuming using GetIt
-        // ),
         BlocProvider<LoginBloc>(create: (_) => getIt<LoginBloc>()),
+        BlocProvider<ProfileBloc>(create: (_) => getIt<ProfileBloc>()),
       ],
       child: const App(), // or LoginPage()
     ),

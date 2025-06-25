@@ -32,7 +32,7 @@ class _AppNavigationBarState extends State<AppNavigationBar> {
     if (currentPath == Routes.notifications.path) return 0;
     if (currentPath == Routes.home.path) return 1;
     if (currentPath == Routes.profile.path) return 2;
-    return 1; // Default to HOME
+    return 2; // Default to HOME
   }
 
   void _onItemTapped(int index) {

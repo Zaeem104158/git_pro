@@ -25,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
         username: _usernameController.text.trim(),
         password: _passwordController.text.trim(),
       );
-      log("REQUEST: ${request.username} and ${request.password}");
+
       context.read<LoginBloc>().add(LoginSubmitted(request));
     }
   }

@@ -11,7 +11,7 @@ abstract interface class ProfileRemoteDataSource {
   @factoryMethod
   factory ProfileRemoteDataSource(Dio dio) = _ProfileRemoteDataSource;
 
-  @GET('/user/{username}')
+  @GET('/users/{username}')
   Future<HttpResponse<ProfileResponseModel>> profile(
     @Path('username') String username,
   );

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
@@ -45,6 +46,7 @@ abstract class AppModule {
           //       utf8.encode('${creds['username']}:${creds['password']}'),
           //     );
           // options.headers['Authorization'] = basic;
+          log("Api URl: ${options.baseUrl}${options.path}");
           options.headers['Content-Type'] = 'application/json';
           return handler.next(options);
         },

@@ -23,6 +23,13 @@ import '../../features/auth/domain/usercases/login_usercase.dart' as _i749;
 import '../../features/auth/presentation/bloc/login_bloc.dart' as _i990;
 import '../../features/profile/data/datasources/remote/profile_remote_datasource.dart'
     as _i750;
+import '../../features/profile/data/repository/profile_repository_impl.dart'
+    as _i309;
+import '../../features/profile/domain/repository/profile_repository.dart'
+    as _i364;
+import '../../features/profile/domain/usecases/profile_fetch_usecase.dart'
+    as _i880;
+import '../../features/profile/presentation/bloc/profile_bloc.dart' as _i469;
 import '../route/app_page.dart' as _i900;
 import '../service/cache_service.dart' as _i723;
 import 'app_injection_module.dart' as _i975;
@@ -51,8 +58,17 @@ Future<_i174.GetIt> init(
   gh.lazySingleton<_i723.ICacheService>(
     () => _i723.CacheService(gh<_i460.SharedPreferences>()),
   );
+  gh.lazySingleton<_i364.ProfileRepository>(
+    () => _i309.ProfileRepositoryImpl(gh<_i750.ProfileRemoteDataSource>()),
+  );
   gh.lazySingleton<_i961.AuthRepository>(
     () => _i409.AuthRepositoryImpl(gh<_i1022.AuthRemoteDataSource>()),
+  );
+  gh.lazySingleton<_i880.ProfileFetch>(
+    () => _i880.ProfileFetch(gh<_i364.ProfileRepository>()),
+  );
+  gh.factory<_i469.ProfileBloc>(
+    () => _i469.ProfileBloc(gh<_i880.ProfileFetch>()),
   );
   gh.lazySingleton<_i749.Login>(() => _i749.Login(gh<_i961.AuthRepository>()));
   gh.factory<_i990.LoginBloc>(() => _i990.LoginBloc(gh<_i749.Login>()));
