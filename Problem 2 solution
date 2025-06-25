@@ -1,0 +1,3 @@
+Problem 2 solution:
+List<int> data = [1,1,2,2,2,3,3,3,4,4,4,4]
+data.toSet().toList()
