@@ -4,7 +4,7 @@ import 'package:injectable/injectable.dart';
 import 'package:gitPro/src/core/di/injection.dart';
 import 'package:gitPro/src/core/service/cache_service.dart';
 import 'package:gitPro/src/features/auth/presentation/pages/login_page.dart';
-import 'package:gitPro/src/features/home/presentation/pages/home_page.dart';
+import 'package:gitPro/src/features/home/presentation/pages/repos_page.dart';
 import 'package:gitPro/src/features/profile/presentation/pages/profile_page.dart';
 import 'package:gitPro/src/shared/widgets/screen_wrapper.dart';
 part 'routes.dart';

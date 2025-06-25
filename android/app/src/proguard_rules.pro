@@ -1,5 +1,5 @@
 # Retrofit and models
--keep class com.yourpackage.model.** { *; }
+-keep class com.example.gitPro.** { *; }
 -keep class retrofit2.** { *; }
 -keep class okhttp3.** { *; }
 -keepclassmembers class * {
