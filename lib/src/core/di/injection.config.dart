@@ -21,6 +21,8 @@ import '../../features/auth/data/repository/auth_repository_impl.dart' as _i409;
 import '../../features/auth/domain/repository/auth_repository.dart' as _i961;
 import '../../features/auth/domain/usercases/login_usercase.dart' as _i749;
 import '../../features/auth/presentation/bloc/login_bloc.dart' as _i990;
+import '../../features/profile/data/datasources/remote/profile_remote_datasource.dart'
+    as _i750;
 import '../route/app_page.dart' as _i900;
 import '../service/cache_service.dart' as _i723;
 import 'app_injection_module.dart' as _i975;
@@ -42,6 +44,9 @@ Future<_i174.GetIt> init(
   gh.lazySingleton<_i900.AppPage>(() => _i900.AppPage());
   gh.lazySingleton<_i1022.AuthRemoteDataSource>(
     () => _i1022.AuthRemoteDataSource(gh<_i361.Dio>()),
+  );
+  gh.lazySingleton<_i750.ProfileRemoteDataSource>(
+    () => _i750.ProfileRemoteDataSource(gh<_i361.Dio>()),
   );
   gh.lazySingleton<_i723.ICacheService>(
     () => _i723.CacheService(gh<_i460.SharedPreferences>()),

@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
@@ -39,13 +38,13 @@ abstract class AppModule {
     dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (options, handler) async {
-          final creds = {"username": "api", "password": "apitest"};
-          final basic =
-              'Basic ' +
-              base64Encode(
-                utf8.encode('${creds['username']}:${creds['password']}'),
-              );
-          options.headers['Authorization'] = basic;
+          // final creds = {"username": "api", "password": "apitest"};
+          // final basic =
+          //     'Basic ' +
+          //     base64Encode(
+          //       utf8.encode('${creds['username']}:${creds['password']}'),
+          //     );
+          // options.headers['Authorization'] = basic;
           options.headers['Content-Type'] = 'application/json';
           return handler.next(options);
         },

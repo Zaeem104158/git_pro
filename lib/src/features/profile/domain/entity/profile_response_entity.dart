@@ -2,7 +2,6 @@ class ProfileResponseEntity {
   final String? login;
   final String? avatarUrl;
   final String? name;
-
   final int? publicRepos;
   final int? followers;
   final int? following;
