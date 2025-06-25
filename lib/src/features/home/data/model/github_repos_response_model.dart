@@ -8,6 +8,7 @@ class GithubReposResponseModel extends GithubReposResponseEntity {
     super.updatedAt,
     super.pushedAt,
     super.language,
+    super.gitRepoUrl,
   });
 
   factory GithubReposResponseModel.fromJson(Map<String, dynamic> json) {
@@ -16,11 +17,14 @@ class GithubReposResponseModel extends GithubReposResponseEntity {
       description: json['description'],
       createdAt: json['created_at'] == null
           ? null
-          : DateTime(json['created_at']),
+          : DateTime.parse(json['created_at']),
       updatedAt: json['updated_at'] == null
           ? null
-          : DateTime(json['updated_at']),
-      pushedAt: json['pushed_at'],
+          : DateTime.parse(json['updated_at']),
+      pushedAt: json['pushed_at'] == null
+          ? null
+          : DateTime.parse(json['pushed_at']),
+      gitRepoUrl: json['git_url'],
     );
   }
 
@@ -32,6 +36,7 @@ class GithubReposResponseModel extends GithubReposResponseEntity {
       'updated_at': updatedAt,
       'pushed_at': pushedAt,
       'language': language,
+      'git_url': gitRepoUrl,
     };
   }
 }

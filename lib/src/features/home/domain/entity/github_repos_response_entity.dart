@@ -3,8 +3,9 @@ class GithubReposResponseEntity {
   final String? description;
   final DateTime? createdAt;
   final DateTime? updatedAt;
-  final String? pushedAt;
+  final DateTime? pushedAt;
   final String? language;
+  final String? gitRepoUrl;
 
   const GithubReposResponseEntity({
     this.name,
@@ -13,5 +14,6 @@ class GithubReposResponseEntity {
     this.updatedAt,
     this.pushedAt,
     this.language,
+    this.gitRepoUrl,
   });
 }

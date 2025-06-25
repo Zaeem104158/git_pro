@@ -48,6 +48,7 @@ class _ReposRemoteDataSource implements ReposRemoteDataSource {
           )
           .toList();
     } on Object catch (e, s) {
+      print("Errror parsing response: $e $s");
       errorLogger?.logError(e, s, _options);
       rethrow;
     }
