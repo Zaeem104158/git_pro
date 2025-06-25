@@ -4,6 +4,7 @@ import 'package:injectable/injectable.dart';
 import 'package:point_of_sale/src/core/di/injection.dart';
 import 'package:point_of_sale/src/core/service/cache_service.dart';
 import 'package:point_of_sale/src/features/auth/presentation/pages/login_page.dart';
+import 'package:point_of_sale/src/features/home/presentation/pages/home_page.dart';
 import 'package:point_of_sale/src/features/profile/presentation/pages/profile_page.dart';
 import 'package:point_of_sale/src/shared/widgets/screen_wrapper.dart';
 part 'routes.dart';
@@ -39,9 +40,8 @@ class AppPage {
           GoRoute(
             path: Routes.home.path,
             name: Routes.home.name,
-            pageBuilder: (context, state) => const MaterialPage(
-              child: Scaffold(body: Center(child: Text("Home"))),
-            ),
+            pageBuilder: (context, state) =>
+                const MaterialPage(child: ReposPage()),
           ),
           GoRoute(
             path: Routes.profile.path,

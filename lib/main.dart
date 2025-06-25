@@ -8,6 +8,7 @@ import 'package:point_of_sale/src/features/auth/data/datasources/remote/auth_rem
 import 'package:point_of_sale/src/features/auth/data/repository/auth_repository_impl.dart';
 import 'package:point_of_sale/src/features/auth/domain/usercases/login_usercase.dart';
 import 'package:point_of_sale/src/features/auth/presentation/bloc/login_bloc.dart';
+import 'package:point_of_sale/src/features/home/presentation/bloc/repos_bloc.dart';
 import 'package:point_of_sale/src/features/profile/presentation/bloc/profile_bloc.dart';
 
 void main() async {
@@ -19,6 +20,7 @@ void main() async {
       providers: [
         BlocProvider<LoginBloc>(create: (_) => getIt<LoginBloc>()),
         BlocProvider<ProfileBloc>(create: (_) => getIt<ProfileBloc>()),
+        BlocProvider<ReposBloc>(create: (_) => getIt<ReposBloc>()),
       ],
       child: const App(), // or LoginPage()
     ),

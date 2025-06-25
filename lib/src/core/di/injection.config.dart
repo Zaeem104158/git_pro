@@ -21,6 +21,13 @@ import '../../features/auth/data/repository/auth_repository_impl.dart' as _i409;
 import '../../features/auth/domain/repository/auth_repository.dart' as _i961;
 import '../../features/auth/domain/usercases/login_usercase.dart' as _i749;
 import '../../features/auth/presentation/bloc/login_bloc.dart' as _i990;
+import '../../features/home/data/datasource/remote/repos_remote_datasource.dart'
+    as _i268;
+import '../../features/home/data/repository/repos_repository_impl.dart'
+    as _i474;
+import '../../features/home/domain/repository/repos_repository.dart' as _i766;
+import '../../features/home/domain/usecases/repos_fetch_usecase.dart' as _i1070;
+import '../../features/home/presentation/bloc/repos_bloc.dart' as _i189;
 import '../../features/profile/data/datasources/remote/profile_remote_datasource.dart'
     as _i750;
 import '../../features/profile/data/repository/profile_repository_impl.dart'
@@ -55,11 +62,17 @@ Future<_i174.GetIt> init(
   gh.lazySingleton<_i750.ProfileRemoteDataSource>(
     () => _i750.ProfileRemoteDataSource(gh<_i361.Dio>()),
   );
+  gh.lazySingleton<_i268.ReposRemoteDataSource>(
+    () => _i268.ReposRemoteDataSource(gh<_i361.Dio>()),
+  );
   gh.lazySingleton<_i723.ICacheService>(
     () => _i723.CacheService(gh<_i460.SharedPreferences>()),
   );
   gh.lazySingleton<_i364.ProfileRepository>(
     () => _i309.ProfileRepositoryImpl(gh<_i750.ProfileRemoteDataSource>()),
+  );
+  gh.lazySingleton<_i766.ReposRepository>(
+    () => _i474.ReposRepositoryImpl(gh<_i268.ReposRemoteDataSource>()),
   );
   gh.lazySingleton<_i961.AuthRepository>(
     () => _i409.AuthRepositoryImpl(gh<_i1022.AuthRemoteDataSource>()),
@@ -70,7 +83,11 @@ Future<_i174.GetIt> init(
   gh.factory<_i469.ProfileBloc>(
     () => _i469.ProfileBloc(gh<_i880.ProfileFetch>()),
   );
+  gh.lazySingleton<_i1070.ReposFetch>(
+    () => _i1070.ReposFetch(gh<_i766.ReposRepository>()),
+  );
   gh.lazySingleton<_i749.Login>(() => _i749.Login(gh<_i961.AuthRepository>()));
+  gh.factory<_i189.ReposBloc>(() => _i189.ReposBloc(gh<_i1070.ReposFetch>()));
   gh.factory<_i990.LoginBloc>(() => _i990.LoginBloc(gh<_i749.Login>()));
   return getIt;
 }
