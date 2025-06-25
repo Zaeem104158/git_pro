@@ -1,9 +1,9 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
-import 'package:point_of_sale/src/core/error/failuer.dart';
-import 'package:point_of_sale/src/features/home/domain/entity/github_repos_response_entity.dart';
-import 'package:point_of_sale/src/features/home/domain/repository/repos_repository.dart';
-import 'package:point_of_sale/src/shared/usecase/usecase.dart';
+import 'package:gitPro/src/core/error/failuer.dart';
+import 'package:gitPro/src/features/home/domain/entity/github_repos_response_entity.dart';
+import 'package:gitPro/src/features/home/domain/repository/repos_repository.dart';
+import 'package:gitPro/src/shared/usecase/usecase.dart';
 
 @LazySingleton()
 class ReposFetch

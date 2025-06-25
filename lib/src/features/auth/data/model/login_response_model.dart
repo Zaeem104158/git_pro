@@ -1,4 +1,4 @@
-import 'package:point_of_sale/src/features/auth/domain/entity/login_response_entity.dart';
+import 'package:gitPro/src/features/auth/domain/entity/login_response_entity.dart';
 
 class LoginResponseModel extends LoginResponseEntity {
   LoginResponseModel({super.result, super.message});

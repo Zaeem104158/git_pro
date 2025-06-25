@@ -3,10 +3,10 @@ import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:injectable/injectable.dart';
-import 'package:point_of_sale/src/core/error/failuer.dart';
-import 'package:point_of_sale/src/features/profile/data/datasources/remote/profile_remote_datasource.dart';
-import 'package:point_of_sale/src/features/profile/domain/entity/profile_response_entity.dart';
-import 'package:point_of_sale/src/features/profile/domain/repository/profile_repository.dart';
+import 'package:gitPro/src/core/error/failuer.dart';
+import 'package:gitPro/src/features/profile/data/datasources/remote/profile_remote_datasource.dart';
+import 'package:gitPro/src/features/profile/domain/entity/profile_response_entity.dart';
+import 'package:gitPro/src/features/profile/domain/repository/profile_repository.dart';
 
 @LazySingleton(as: ProfileRepository)
 class ProfileRepositoryImpl implements ProfileRepository {

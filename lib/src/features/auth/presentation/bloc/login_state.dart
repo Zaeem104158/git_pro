@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:point_of_sale/src/features/auth/domain/entity/login_response_entity.dart';
+import 'package:gitPro/src/features/auth/domain/entity/login_response_entity.dart';
 
 abstract class LoginState extends Equatable {
   const LoginState();

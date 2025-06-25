@@ -2,11 +2,11 @@ import 'package:flutter/material.dart' hide SearchController;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:go_router/go_router.dart';
-import 'package:point_of_sale/src/core/di/injection.dart';
-import 'package:point_of_sale/src/core/route/app_page.dart';
-import 'package:point_of_sale/src/core/service/asset_service.dart';
-import 'package:point_of_sale/src/core/style/app_color.dart';
-import 'package:point_of_sale/src/shared/widgets/underlined_navigation_destination_widget.dart';
+import 'package:gitPro/src/core/di/injection.dart';
+import 'package:gitPro/src/core/route/app_page.dart';
+import 'package:gitPro/src/core/service/asset_service.dart';
+import 'package:gitPro/src/core/style/app_color.dart';
+import 'package:gitPro/src/shared/widgets/underlined_navigation_destination_widget.dart';
 
 class AppNavigationBar extends StatefulWidget {
   const AppNavigationBar({super.key});

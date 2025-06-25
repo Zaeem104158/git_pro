@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
-import 'package:point_of_sale/src/features/auth/domain/usercases/login_usercase.dart';
+import 'package:gitPro/src/features/auth/domain/usercases/login_usercase.dart';
 import 'login_event.dart';
 import 'login_state.dart';
 

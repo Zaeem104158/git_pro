@@ -1,4 +1,4 @@
-import 'package:point_of_sale/src/features/auth/domain/entity/login_request_entity.dart';
+import 'package:gitPro/src/features/auth/domain/entity/login_request_entity.dart';
 
 class LoginRequestModel extends LoginRequestEntity {
   LoginRequestModel({required super.username, required super.password});

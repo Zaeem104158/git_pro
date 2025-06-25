@@ -1,4 +1,4 @@
-import 'package:point_of_sale/src/features/home/domain/entity/github_repos_response_entity.dart';
+import 'package:gitPro/src/features/home/domain/entity/github_repos_response_entity.dart';
 
 class GithubReposResponseModel extends GithubReposResponseEntity {
   const GithubReposResponseModel({

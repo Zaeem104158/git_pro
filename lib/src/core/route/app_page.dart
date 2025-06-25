@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:injectable/injectable.dart';
-import 'package:point_of_sale/src/core/di/injection.dart';
-import 'package:point_of_sale/src/core/service/cache_service.dart';
-import 'package:point_of_sale/src/features/auth/presentation/pages/login_page.dart';
-import 'package:point_of_sale/src/features/home/presentation/pages/home_page.dart';
-import 'package:point_of_sale/src/features/profile/presentation/pages/profile_page.dart';
-import 'package:point_of_sale/src/shared/widgets/screen_wrapper.dart';
+import 'package:gitPro/src/core/di/injection.dart';
+import 'package:gitPro/src/core/service/cache_service.dart';
+import 'package:gitPro/src/features/auth/presentation/pages/login_page.dart';
+import 'package:gitPro/src/features/home/presentation/pages/home_page.dart';
+import 'package:gitPro/src/features/profile/presentation/pages/profile_page.dart';
+import 'package:gitPro/src/shared/widgets/screen_wrapper.dart';
 part 'routes.dart';
 
 @lazySingleton

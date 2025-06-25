@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
-import 'package:point_of_sale/src/features/home/domain/usecases/repos_fetch_usecase.dart';
+import 'package:gitPro/src/features/home/domain/usecases/repos_fetch_usecase.dart';
 import 'repos_event.dart';
 import 'repos_state.dart';
 

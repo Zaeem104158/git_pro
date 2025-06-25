@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
-import 'package:point_of_sale/src/features/home/presentation/bloc/repos_bloc.dart';
-import 'package:point_of_sale/src/features/home/presentation/bloc/repos_event.dart';
-import 'package:point_of_sale/src/features/home/presentation/bloc/repos_state.dart';
-import 'package:point_of_sale/src/features/profile/presentation/bloc/profile_bloc.dart';
-import 'package:point_of_sale/src/features/profile/presentation/bloc/profile_state.dart';
+import 'package:gitPro/src/features/home/presentation/bloc/repos_bloc.dart';
+import 'package:gitPro/src/features/home/presentation/bloc/repos_event.dart';
+import 'package:gitPro/src/features/home/presentation/bloc/repos_state.dart';
+import 'package:gitPro/src/features/profile/presentation/bloc/profile_bloc.dart';
+import 'package:gitPro/src/features/profile/presentation/bloc/profile_state.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ReposPage extends StatefulWidget {

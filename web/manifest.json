@@ -1,6 +1,6 @@
 {
-    "name": "point_of_sale",
-    "short_name": "point_of_sale",
+    "name": "gitPro",
+    "short_name": "gitPro",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

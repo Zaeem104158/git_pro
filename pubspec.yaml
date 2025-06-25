@@ -1,4 +1,4 @@
-name: point_of_sale
+name: gitPro
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -40,7 +40,6 @@ dependencies:
   retrofit: ^4.4.2
   fpdart: ^1.1.1
   logger: ^2.6.0
-  flutter_native_splash: ^2.4.6
   injectable: ^2.5.0
   go_router: ^15.2.4
   shared_preferences: ^2.5.3
@@ -48,7 +47,7 @@ dependencies:
   equatable: ^2.0.7
   intl: ^0.20.2
   url_launcher: ^6.3.1
-  change_app_package_name: ^1.5.0
+
 
   
 
@@ -59,12 +58,15 @@ dev_dependencies:
   injectable_generator: ^2.7.0 
   retrofit_generator: '>=8.0.0 <10.0.0'
   flutter_launcher_icons: ^0.14.4
-flutter_icons:
+  flutter_native_splash: ^2.4.6
+
+# dart run flutter_launcher_icons
+flutter_launcher_icons:
   android: true
   ios: true
-  image_path: "assets/icons/app_logo_light.png"
+  image_path: "assets/icons/app_logo.png"
   adaptive_icon_background: "#FFFFFF"
-  adaptive_icon_foreground: "assets/icons/app_logo_light.png"
+  adaptive_icon_foreground: "assets/icons/app_logo.png"
   min_sdk_android: 21 # android min sdk min:16, default 21
   # web:
   #   generate: true
@@ -79,26 +81,27 @@ flutter_icons:
   #   generate: true
   #   image_path: "path/to/image.png"
 
-  flutter_native_splash:
-    color: "#ffffff"
+  #dart run flutter_native_splash:create
+flutter_native_splash:
+  color: "#000000"
+  color_dark: "#000000"
+  image: assets/icons/app_logo.png
+    
+  android: true
+  android_12:
+    image: assets/icons/app_logo.png
+ 
+    color: "#000000"
     color_dark: "#000000"
-    image: assets/icons/app_logo_light.png
-    image_dark: assets/icons/app_logo_dark.png
-    android: true
-    android_12:
-      image: assets/icons/app_logo_light.png
-      image_dark: assets/icons/app_logo_dark.png
-      color: "#ffffff"
-      color_dark: "#000000"
-    ios: true
-    web: false
+  ios: true
+  web: false
     
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^5.0.0
+  #flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
-import 'package:point_of_sale/src/features/profile/domain/usecases/profile_fetch_usecase.dart';
+import 'package:gitPro/src/features/profile/domain/usecases/profile_fetch_usecase.dart';
 import 'profile_event.dart';
 import 'profile_state.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:point_of_sale/src/core/style/app_color.dart';
+import 'package:gitPro/src/core/style/app_color.dart';
 
 class AppTheme {
   static ThemeData get lightTheme {

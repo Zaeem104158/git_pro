@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:point_of_sale/src/core/error/exception.dart';
-import 'package:point_of_sale/src/core/error/failuer.dart';
+import 'package:gitPro/src/core/error/exception.dart';
+import 'package:gitPro/src/core/error/failuer.dart';
 
 Failure mapExceptionToFailure(Exception e) {
   if (e is ServerException) return ServerFailure(e.message);

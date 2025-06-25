@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:point_of_sale/src/core/di/injection.dart';
-import 'package:point_of_sale/src/core/style/app_theme.dart';
+import 'package:gitPro/src/core/di/injection.dart';
+import 'package:gitPro/src/core/style/app_theme.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

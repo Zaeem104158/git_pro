@@ -1,4 +1,4 @@
-import 'package:point_of_sale/src/features/profile/domain/entity/profile_response_entity.dart';
+import 'package:gitPro/src/features/profile/domain/entity/profile_response_entity.dart';
 
 class ProfileResponseModel extends ProfileResponseEntity {
   const ProfileResponseModel({

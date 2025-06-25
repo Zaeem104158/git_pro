@@ -1,4 +1,4 @@
-package com.example.point_of_sale
+package com.example.gitPro
 
 import io.flutter.embedding.android.FlutterActivity
 

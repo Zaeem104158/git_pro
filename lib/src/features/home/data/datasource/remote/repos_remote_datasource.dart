@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:point_of_sale/src/features/home/data/model/github_repos_response_model.dart';
+import 'package:gitPro/src/features/home/data/model/github_repos_response_model.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'repos_remote_datasource.g.dart';

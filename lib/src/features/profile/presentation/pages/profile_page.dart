@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:point_of_sale/src/features/profile/presentation/bloc/profile_bloc.dart';
-import 'package:point_of_sale/src/features/profile/presentation/bloc/profile_event.dart';
-import 'package:point_of_sale/src/features/profile/presentation/bloc/profile_state.dart';
+import 'package:gitPro/src/features/profile/presentation/bloc/profile_bloc.dart';
+import 'package:gitPro/src/features/profile/presentation/bloc/profile_event.dart';
+import 'package:gitPro/src/features/profile/presentation/bloc/profile_state.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});

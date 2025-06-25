@@ -1,4 +1,4 @@
-# point_of_sale
+# gitPro
 
 A new Flutter project.
 
